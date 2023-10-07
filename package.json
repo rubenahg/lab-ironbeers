@@ -6,6 +6,16 @@
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
+  "nodemonConfig": {
+    "ext": "ts, js, hbs, css",
+    "ignore": [
+      "*.test.ts"
+    ],
+    "delay": "3",
+    "execMap": {
+      "ts": "ts-node"
+    }
+  },
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",

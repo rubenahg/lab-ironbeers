@@ -1,0 +1,23 @@
+<h1 class="siteHeadline">{{beer.beerName}}</h1>
+<div class="randomBeer">
+        {{#if beer}}
+            <div class="imgContainer">
+                {{#if beer.beerImage}}
+                    <img src="{{beer.beerImage}}" alt="{{beer.beerName}}" class="randomBeerImage">
+                {{else}}
+                    <p class="noImage">No previe Image available.</p>
+                {{/if}}
+            </div> 
+            <div class="randomBeerContent">
+                <h4>{{beer.beerTagline}}</h4>
+                <p>{{beer.beerDescription}}</p>
+                <p>Food Pairing:</p>
+                <ul>
+                    <li>{{beer.beerFoodPairing.[0]}}</li>
+                    <li>{{beer.beerFoodPairing.[1]}}</li>
+                    <li>{{beer.beerFoodPairing.[2]}}</li>
+                </ul>
+                <p>{{beer.beerBrewersTips}}</p>
+            </div>
+        {{/if}}
+    </div>
